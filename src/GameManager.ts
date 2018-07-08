@@ -1,6 +1,6 @@
 const THREE = require('three')
 var OrbitControls = require('three-orbit-controls')(THREE)
-
+require('./vendor/GamepadControl').default(THREE)
 interface ScreenSize {
 	width: number
 	height: number
@@ -12,6 +12,7 @@ class GameManager {
 	scene: any
 	controls: any
 	canvas: HTMLElement
+	useGamepad: boolean
 
 	constructor(private screenSize: ScreenSize) {
 		this.canvas = document.getElementById('game')
@@ -68,7 +69,9 @@ class GameManager {
 		var helper = new THREE.GridHelper(1200, 60, 0xff4444, 0x404040)
 		this.scene.add(helper)
 
-		this.controls = new OrbitControls(this.camera)
+		this.controls = this.useGamepad
+			? new OrbitControls(this.camera)
+			: new THREE.GamepadControls(this.camera)
 
 		//controls.update() must be called after any manual changes to the camera's transform
 		this.camera.position.set(0, 20, 100)
