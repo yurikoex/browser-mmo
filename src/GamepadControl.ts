@@ -1,8 +1,3 @@
-/**
- * @author spite / https://github.com/spite
- */
-/*global THREE, console */
-
 export default THREE => {
 	THREE.GamepadControls = function(object) {
 		this.rotMatrix = new THREE.Matrix4()
@@ -26,8 +21,8 @@ export default THREE => {
 				this.lon += this.filter(g.axes[0])
 				this.lat -= this.filter(g.axes[1])
 				this.lat = Math.max(-85, Math.min(85, this.lat))
-				var phi = (90 - this.lat) * Math.PI / 180
-				var theta = this.lon * Math.PI / 180
+				var phi = ((90 - this.lat) * Math.PI) / 180
+				var theta = (this.lon * Math.PI) / 180
 
 				this.target.x = 10 * Math.sin(phi) * Math.cos(theta)
 				this.target.y = 10 * Math.cos(phi)

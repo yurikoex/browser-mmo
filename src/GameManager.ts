@@ -1,6 +1,6 @@
 const THREE = require('three')
 var OrbitControls = require('three-orbit-controls')(THREE)
-require('./vendor/GamepadControl').default(THREE)
+require('./GamepadControl').default(THREE)
 interface ScreenSize {
 	width: number
 	height: number
@@ -24,6 +24,7 @@ class GameManager {
 
 	testGamepad() {
 		this.useGamepad = navigator.getGamepads()[0] !== null
+		console.log(this.useGamepad)
 	}
 
 	setDimensions() {
@@ -69,7 +70,7 @@ class GameManager {
 		var helper = new THREE.GridHelper(1200, 60, 0xff4444, 0x404040)
 		this.scene.add(helper)
 
-		this.controls = this.useGamepad
+		this.controls = !this.useGamepad
 			? new OrbitControls(this.camera)
 			: new THREE.GamepadControls(this.camera)
 
