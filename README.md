@@ -1,4 +1,4 @@
-### Design
+# Design
 
 This experiment is a p2p massive multiplayer universe simulation built on blockchain techniques.
 
