@@ -4,7 +4,7 @@ This experiment is a p2p massive multiplayer universe simulation built on blockc
 
 This employs two primary techniques, one being a quadtree, the second being a blockchain, which this this project will call a leafchain.
 
-NOTE: avoiding calling quadtree node's node's to avoid confusion about node.js
+NOTE: avoiding calling quadtree node's node's to avoid confusion about node.js and player nodes(TOO MANY NODES!).
 
 ## Laws of a Leafchain
 
@@ -44,3 +44,23 @@ rotationMatrix:[ 11, 21, 31, 41, 12, 22, 32, 42, 13, 23, 33, 43, 14, 24, 34, 44 
 maxObjectSize: 1024
 maxRecordSize: 1024
 ```
+
+### Player Node
+
+Each player shall run a node while playing.
+
+The node will run while the device is online.
+
+Players will receive tokenized payments for increments of time they process requests.
+
+Requests come in many forms. Requests can be transactions, leafchain queries, leafchain validations, action validations, etc.
+
+Tokenized payments may be used for in-game economics or real world exchanges.
+
+These tokenized payments run on a parallel leafchain specialized only for universal economics among leafchain systems. Hopefully inspiring balanced economies in a leafchain multiverse.
+
+Player nodes are incentivised to run their node 24/7 and service as many requests as possible for tokenized rewards. 
+
+Running as many nodes as possible is also incentivised.
+
+The quality of the requests determine the payout of tokenized rewards. Lower the latency, better the reward.
