@@ -37,8 +37,10 @@ If data-chain max object storage size is reached it will cause a squash action a
 ### Seed Setup
 
 ```
-leafSize: 1m
+initialLeafSize: 1km
 minLeafSize: 1nm
 position: {x:1, y:1, z:1}
 rotationMatrix:[ 11, 21, 31, 41, 12, 22, 32, 42, 13, 23, 33, 43, 14, 24, 34, 44 ]
+maxObjectSize: 1024
+maxRecordSize: 1024
 ```
