@@ -31,3 +31,12 @@ Data-chain has a max record size and max object storage size.
 If data-chain max record size it will cause a squash action and flatten the history of changes and create a new re-chain block.
 
 If data-chain max object storage size is reached it will cause a squash action and generate the 4 child leaves until minimum leaf size is reached.
+
+### Seed Setup
+
+```
+leafSize: 1m
+minLeafSize: 1nm
+position: {x:1, y:1, z:1}
+rotationMatrix:[ 11, 21, 31, 41, 12, 22, 32, 42, 13, 23, 33, 43, 14, 24, 34, 44 ]
+```
