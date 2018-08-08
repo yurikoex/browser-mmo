@@ -8,6 +8,8 @@ NOTE: avoiding calling quadtree node's node's to avoid confusion about node.js
 
 ## Laws of a Leafchain
 
+![Alt text](leafchain.png?raw=true "leaf-chain")
+
 Everytime a user places an item in 3d space, it is placed in the leafchain. 
 
 In a quadtree, every leaf can have 4 children leaves. Continueing until a minimum leaf size.
